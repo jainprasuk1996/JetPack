@@ -263,6 +263,7 @@ def set_nic_legacy_boot_protocol(nic_id, value, drac_client):
 
     :param nic_id: id of the network interface controller (NIC)
     :param value: legacy boot protocol
+    :param drac_client: drac_client from python-dracclient
     :returns: dictionary containing a 'commit_required' key with a
               boolean value indicating whether a configuration job
               must be created for the new legacy boot protocol
@@ -283,6 +284,7 @@ def set_nic_legacy_boot_protocol_none(nic_id, drac_client):
     configuration job must be created and the node must be rebooted.
 
     :param nic_id: id of the network interface controller (NIC)
+    :param drac_client: drac_client from python-dracclient
     :returns: dictionary containing a 'commit_required' key with a
               boolean value indicating whether a configuration job
               must be created for the new legacy boot protocol
@@ -303,6 +305,7 @@ def set_nic_legacy_boot_protocol_pxe(nic_id, drac_client):
     configuration job must be created and the node must be rebooted.
 
     :param nic_id: id of the network interface controller (NIC)
+    :param drac_client: drac_client from python-dracclient
     :returns: dictionary containing a 'commit_required' key with a
               boolean value indicating whether a configuration job
               must be created for the new legacy boot protocol
@@ -384,6 +387,7 @@ def set_nic_setting(nic_id, attribute_name, value, drac_client):
     :param nic_id: id of the network interface controller (NIC)
     :param attribute_name: name of the setting
     :param value: value of the attribute
+    :param drac_client: drac_client from python-dracclient
     :returns: dictionary containing a 'commit_required' key with a
               boolean value indicating whether a configuration job
               must be created for the new setting to be applied
